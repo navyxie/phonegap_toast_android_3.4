@@ -1,14 +1,13 @@
-package com.kalengo.weathermeida.plugins;
+package com.kalengo.toast;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaInterface;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import android.widget.Toast;
 
-import com.kalengo.weathermeida.util.UrlUtil;
 
 /**
  * @author Administrator 吐司提示插件
@@ -19,8 +18,6 @@ public class ToastPlugin extends CordovaPlugin {
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {
 		if (TOAST.equals(action)) {
-			UrlUtil.info(TOAST, "message:" + data.getString(0) + ",length:"
-					+ data.getInt(1));
 			toast(data.getString(0), data.getInt(1), callbackContext);
 		}
 		return false;
