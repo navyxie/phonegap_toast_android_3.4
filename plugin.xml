@@ -9,18 +9,18 @@
     <keywords>phonegap,toast</keywords>
 
 
-    <js-module src="www/toast.js" name="Toast">
+    <js-module src="www/toast.js" name="ToastPlugin">
         <clobbers target="window.toast" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Toast">
-                <param name="android-package" value="org.kalengo.toast.Toast"/>
+            <feature name="ToastPlugin">
+                <param name="android-package" value="org.kalengo.toast.ToastPlugin"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Toast.java" target-dir="src/org/kalengo/toast" />      
+        <source-file src="src/android/ToastPlugin.java" target-dir="src/org/kalengo/toast" />      
      </platform>          
 </plugin>
