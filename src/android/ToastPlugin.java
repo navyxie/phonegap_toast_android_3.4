@@ -1,4 +1,4 @@
-package com.kalengo.toast;
+package org.kalengo.toast;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
